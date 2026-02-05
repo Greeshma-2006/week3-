@@ -1,0 +1,90 @@
+
+### USER APIs                   
+
+
+### TEST user API
+GET http://localhost:4000/user-api/test
+
+
+### GET all users
+GET http://localhost:4000/user-api/users
+
+
+### CREATE new user
+POST http://localhost:4000/user-api/create-user
+Content-Type: application/json
+
+{
+  "username": "greeshma",
+  "password": "greeshma123",
+  "age": 21
+}
+
+
+### UPDATE user by ID
+PUT http://localhost:4000/user-api/update-user/697dc1603ae91a51167c38be
+Content-Type: application/json
+
+{
+  "username": "manasa",
+  "password": "manasa123",
+  "age": 22
+}
+
+
+### DELETE user by ID
+DELETE http://localhost:4000/user-api/delete-user/697dc1603ae91a51167c38be
+
+
+### USER AUTHENTICATION (LOGIN)
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+  "username": "greeshma",
+  "password": "greeshma123"
+}
+
+
+###  PRODUCT APIs                 
+
+
+### CREATE new product
+POST http://localhost:4000/product-api/create-product
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "price": 75000,
+  "category": "Electronics"
+}
+
+
+### GET all products
+GET http://localhost:4000/product-api/products
+
+
+### UPDATE product by ID
+PUT http://localhost:4000/product-api/update-product/697dd30f9ffb9c165403fe39
+Content-Type: application/json
+
+{
+  "name": "Gaming Laptop",
+  "price": 85000,
+  "category": "Electronics"
+}
+
+
+### DELETE product by ID
+DELETE http://localhost:4000/product-api/delete-product/697dd30f9ffb9c165403fe39
+### user authentication 
+POST http://localhost:4000/user-api/auth 
+Content-Type: application/json
+
+{
+  "username": "greeshma",
+  "password": "greeshma123"
+}
+
+### req for protected route
+GET http://localhost:4000/user-api/test
